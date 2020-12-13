@@ -5,6 +5,7 @@ Praktikum Modul 4 Jarkom 2020<br/>
 05111840007004 Siti Munawaroh
 
 ## VLSM (Variable Length Subnet Masking) - CPT
+<br/>Untuk server MOJOKERTO dan MALANG, tidak perlu diikutkan dalam subnet pembagian IP, karena mereka menggunakan NID DMZ: 10.151.79.64/29, di mana akan dipecah masing-masing mendapatkan NID 10.151.79.64/30 dan 10.151.79.68/30.
 <br/>![image](https://user-images.githubusercontent.com/58022238/102002440-13361200-3d2f-11eb-8c64-a7126a76e6e9.png)
 <br/>![image](https://user-images.githubusercontent.com/58022238/102008485-80639a80-3d63-11eb-96be-160948024eaa.png)
 <br/> Subnet besar yang dibentuk memiliki NID 192.168.0.0 dengan netmask /19. Pembagian IP berdasarkan NID dan netmask dihitung menggunakan pohon pada gambar di bawah:
@@ -25,3 +26,22 @@ Menggabungkan subnet-subnet mulai dari yang paling jauh dalam topologi, penggabu
 <br/>Sehingga di dapatkan berikut pohon pembagian IP berdasarkan penggabungan subnet yang telah dilakukan:
 
 <br/>![image](https://user-images.githubusercontent.com/58022238/102009334-5b722600-3d69-11eb-9db4-9193cf7461b6.png)
+
+<br/>Pertama membuat file ```topologi.sh``` dengan konfigurasi berikut:
+```
+# Switch
+uml_switch -unix switch1 > /dev/null < /dev/null &
+uml_switch -unix switch2 > /dev/null < /dev/null &
+uml_switch -unix switch3 > /dev/null < /dev/null &
+uml_switch -unix switch4 > /dev/null < /dev/null &
+uml_switch -unix switch5 > /dev/null < /dev/null &
+uml_switch -unix switch13 > /dev/null < /dev/null &
+uml_switch -unix switch15 > /dev/null < /dev/null &
+uml_switch -unix switch16 > /dev/null < /dev/null &
+uml_switch -unix switch17 > /dev/null < /dev/null &
+uml_switch -unix switch18 > /dev/null < /dev/null &
+uml_switch -unix switch19 > /dev/null < /dev/null &
+uml_switch -unix switch20 > /dev/null < /dev/null &
+uml_switch -unix switch21 > /dev/null < /dev/null &
+uml_switch -unix switch22 > /dev/null < /dev/null &
+uml_switch -unix switch25 > /dev/null < /dev/null &
