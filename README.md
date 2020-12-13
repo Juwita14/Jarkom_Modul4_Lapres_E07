@@ -383,3 +383,38 @@ gateway 192.168.0.1
 - **PASURUAN** = A10, C2
 - **BATU** = B3, A8, C1, Malang
 - **KEDIRI** = B1, Malang
+
+Mengetik perintah ```nano route.sh``` dan tambahkan route berikut untuk keempat UML:
+
+**SURABAYA**
+```
+ip route add 192.168.128.0/17 via 192.168.192.2
+ip route add 192.168.0.0/18 via 192.168.32.2
+ip route add 192.168.64.0/22 via 192.168.64.2
+ip route add 10.151.79.64/30 via 10.151.79.66
+ip route add 10.151.79.68/30 via 192.168.32.2
+```
+
+**PASURUAN**
+```
+ip route add 192.168.128.0/19 via 192.168.144.2
+ip route add 192.168.160.0/22 via 192.168.160.2
+```
+
+**BATU**
+```
+ip route add 192.168.16.0/22 via 192.168.16.3
+ip route add 192.168.16.0/22 via 192.168.16.2
+ip route add 192.168.20.0/22 via 192.168.20.2
+ip route add 192.168.0.0/20 via 192.168.8.2
+ip route add 10.151.79.68/30 via 192.168.8.2
+```
+
+**KEDIRI**
+```
+ip route add 10.151.79.68/30 via 10.151.79.70
+ip route add 192.168.0.0/21 via 192.168.4.3
+ip route add 192.168.0.0/21 via 192.168.4.2
+```
+
+Untuk menjalankan bash script pada UML menggunakan perintah ```bash route.sh```.
