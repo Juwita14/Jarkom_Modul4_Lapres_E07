@@ -418,3 +418,13 @@ ip route add 192.168.0.0/21 via 192.168.4.2
 ```
 
 Untuk menjalankan bash script pada UML menggunakan perintah ```bash route.sh```.
+</br>Cek apakah routing dan CIDR sudah berjalan dengan baik dengan melakukan beberapa tes.
+
+NGANJUK ping ke BONDOWOSO
+</br>![nganjuk bondowoso](https://user-images.githubusercontent.com/56763570/102014120-36e66180-3d09-11eb-9e3a-813d20037e46.jpg)</br>
+LUMAJANG ping ke JOMBANG
+</br>![lumajang jombang](https://user-images.githubusercontent.com/56763570/102014122-3a79e880-3d09-11eb-840e-d31d77d9d66f.jpg)</br>
+KEDIRI ping ke PROBOLINGGO
+</br>![kediri probolinggo](https://user-images.githubusercontent.com/56763570/102014125-3c43ac00-3d09-11eb-825c-6e7929fbc984.jpg)</br>
+
+
