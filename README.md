@@ -420,11 +420,20 @@ ip route add 192.168.0.0/21 via 192.168.4.2
 Untuk menjalankan bash script pada UML menggunakan perintah ```bash route.sh```.
 </br>Cek apakah routing dan CIDR sudah berjalan dengan baik dengan melakukan beberapa tes.
 
-NGANJUK ping ke BONDOWOSO
+</br>NGANJUK ping ke BONDOWOSO
 </br>![nganjuk bondowoso](https://user-images.githubusercontent.com/56763570/102014120-36e66180-3d09-11eb-9e3a-813d20037e46.jpg)</br>
-LUMAJANG ping ke JOMBANG
+</br>LUMAJANG ping ke JOMBANG
 </br>![lumajang jombang](https://user-images.githubusercontent.com/56763570/102014122-3a79e880-3d09-11eb-840e-d31d77d9d66f.jpg)</br>
-KEDIRI ping ke PROBOLINGGO
+</br>KEDIRI ping ke PROBOLINGGO
 </br>![kediri probolinggo](https://user-images.githubusercontent.com/56763570/102014125-3c43ac00-3d09-11eb-825c-6e7929fbc984.jpg)</br>
+</br>PROBOLINGGO ping ke JOMBANG
+</br>![PROBOLINGGO JOMBANG](https://user-images.githubusercontent.com/56763570/102014268-f6d3ae80-3d09-11eb-930e-5bcc239ed582.jpg)</br>
+</br>BANYUWANGI ping its.ac.id
+</br>![BANYUWANGI ITS](https://user-images.githubusercontent.com/56763570/102014254-e91e2900-3d09-11eb-93ae-1a3168b20d35.jpg)</br>
+</br>BLITAR ping its.ac.id
+</br>![BLITAR ITS](https://user-images.githubusercontent.com/56763570/102014256-eae7ec80-3d09-11eb-9ab4-ea0b356c04b4.jpg)</br>
+</br>SIDOARJO ping its.ac.id
+</br>![SIDOARJO ITS](https://user-images.githubusercontent.com/56763570/102014272-fa673580-3d09-11eb-94c8-e08bdbe3f2fa.jpg)</br>
+
 
 
