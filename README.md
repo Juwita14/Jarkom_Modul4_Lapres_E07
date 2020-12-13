@@ -7,7 +7,24 @@ Praktikum Modul 4 Jarkom 2020<br/>
 ## VLSM
 
 <br/>![image](https://user-images.githubusercontent.com/58022238/102002440-13361200-3d2f-11eb-8c64-a7126a76e6e9.png)
+## VLSM (Variable Length Subnet Masking) - CPT
 
+| Subnet | Jumlah IP | Netmask |
+|--------|-----------|---------|
+| A1     | 1001      | /22     |
+| A2     | 13        | /28     |
+| A3     | 502       | /23     |
+| A4     | 2         | /30     |
+| A5     | 2         | /30     |
+| A6     | 2         | /30     |
+| A7     | 101       | /25     |
+| A8     | 701       | /22     |
+| A9     | 2021      | /21     |
+| A10    | 521       | /22     |
+| A11    | 2         | /30     |
+| A12    | 721       | /22     |
+| A13    | 252       | /24     |
+| **Total**  | **5841**      | **/19**     |
 <br/>![image](https://user-images.githubusercontent.com/58022238/102008485-80639a80-3d63-11eb-96be-160948024eaa.png)
 <br/> Subnet besar yang dibentuk memiliki NID 192.168.0.0 dengan netmask /19. Pembagian IP berdasarkan NID dan netmask dihitung menggunakan pohon pada gambar di bawah:
 <br/>![vlsm](https://user-images.githubusercontent.com/58022238/102008592-565ea800-3d64-11eb-9aff-71af88d93f09.png)
