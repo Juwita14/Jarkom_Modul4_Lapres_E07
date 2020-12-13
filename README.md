@@ -47,7 +47,7 @@ uml_switch -unix switch22 > /dev/null < /dev/null &
 uml_switch -unix switch25 > /dev/null < /dev/null &
 
 # Router
-xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.78.33 eth1=daemon,,,switch1 eth2=daemon,,,switch2 eth3=daemon,,,switch4 eth4=daemon,,,switch13 mem=64M &
+xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.70.33 eth1=daemon,,,switch1 eth2=daemon,,,switch2 eth3=daemon,,,switch4 eth4=daemon,,,switch13 mem=64M &
 xterm -T PASURUAN -e linux ubd0=PASURUAN,jarkom umid=PASURUAN eth0=daemon,,,switch2 eth1=daemon,,,switch3 eth2=daemon,,,switch19 mem=64M &
 xterm -T PROBOLINGGO -e linux ubd0=PROBOLINGGO,jarkom umid=PROBOLINGGO eth0=daemon,,,switch3 eth1=daemon,,,switch15 eth2=daemon,,,switch16 mem=64M &
 xterm -T BATU -e linux ubd0=BATU,jarkom umid=BATU eth0=daemon,,,switch4 eth1=daemon,,,switch5 eth2=daemon,,,switch21 eth3=daemon,,,switch22 mem=64M &
@@ -70,4 +70,309 @@ xterm -T JOMBANG -e linux ubd0=JOMBANG,jarkom umid=JOMBANG eth0=daemon,,,switch2
 xterm -T NGANJUK -e linux ubd0=NGANJUK,jarkom umid=NGANJUK eth0=daemon,,,switch21 mem=64M &
 xterm -T TULUNGAGUNG -e linux ubd0=TULUNGAGUNG,jarkom umid=TULUNGAGUNG eth0=daemon,,,switch20 mem=64M &
 xterm -T LUMAJANG -e linux ubd0=LUMAJANG,jarkom umid=LUMAJANG eth0=daemon,,,switch17 mem=64M &
+```
+
+Melakukan setting interface di setiap UML dengan menjalankan perintah ```nano /etc/network/interfaces``` kemudian, restart network dengan perintah ```service networking restart```.
+
+**SURABAYA (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.71.34
+netmask 255.255.255.252
+gateway 10.151.71.33
+
+auto eth1
+iface eth1 inet static
+address 192.168.64.1
+netmask 255.255.252.0
+
+auto eth2
+iface eth2 inet static
+address 192.168.192.1
+netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+address 192.168.32.1
+netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+address 10.151.71.65
+netmask 255.255.255.252
+```
+
+**PASURUAN (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.192.2
+netmask 255.255.255.252
+gateway 192.168.192.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.144.1
+netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+address 192.168.160.1
+netmask 255.255.252.0
+```
+
+**MOJOKERTO (Sebagai Server)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.71.66
+netmask 255.255.255.252
+gateway 10.151.71.65
+```
+
+**SAMPANG (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.64.2
+netmask 255.255.252.0
+gateway 192.168.64.1
+```
+
+**PROBOLINGGO (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.144.2
+netmask 255.255.255.252
+gateway 192.168.144.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.136.1
+netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+address 192.168.128.1
+netmask 255.255.248.0
+```
+
+**SIDOARJO (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.160.2
+netmask 255.255.252.0
+gateway 192.168.160.1
+```
+
+**BANYUWANGI (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.128.3
+netmask 255.255.248.0
+gateway 192.168.128.1
+```
+
+**JEMBER (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.128.2
+netmask 255.255.248.0
+gateway 192.168.128.1
+```
+
+**BONDOWOSO (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.136.2
+netmask 255.255.255.128
+gateway 192.168.136.1
+```
+
+**BATU (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.32.2
+netmask 255.255.255.252
+gateway 192.168.32.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.8.1
+netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+address 192.168.20.1
+netmask 255.255.252.0
+
+auto eth3
+iface eth3 inet static
+address 192.168.16.1
+netmask 255.255.254.0
+```
+
+**KEDIRI (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.8.2
+netmask 255.255.255.252
+gateway 192.168.8.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.4.1
+netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+address 10.151.71.69
+netmask 255.255.255.252
+```
+
+**JOMBANG (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.16.3
+netmask 255.255.254.0
+gateway 192.168.16.1
+```
+
+**MADIUN (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.16.2
+netmask 255.255.254.0
+gateway 192.168.16.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.18.1
+netmask 255.255.255.240
+```
+
+**BOJONEGORO (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.18.2
+netmask 255.255.255.240
+gateway 192.168.18.1
+```
+
+**NGANJUK (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.20.2
+netmask 255.255.252.0
+gateway 192.168.20.1
+```
+
+**MALANG (Sebagai Server)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.71.70
+netmask 255.255.255.252
+gateway 10.151.71.69
+```
+
+**BLITAR (Sebagai Router)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.4.2
+netmask 255.255.255.0
+gateway 192.168.4.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.1
+netmask 255.255.252.0
+```
+
+**LUMAJANG (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.4.3
+netmask 255.255.255.0
+gateway 192.168.4.1
+```
+
+**TULUNGAGUNG (Sebagai Klien)**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.0.2
+netmask 255.255.252.0
+gateway 192.168.0.1
 ```
