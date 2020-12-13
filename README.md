@@ -81,9 +81,9 @@ iface lo inet loopback
 
 auto eth0
 iface eth0 inet static
-address 10.151.71.34
+address 10.151.70.34
 netmask 255.255.255.252
-gateway 10.151.71.33
+gateway 10.151.70.33
 
 auto eth1
 iface eth1 inet static
@@ -267,7 +267,7 @@ netmask 255.255.255.0
 
 auto eth2
 iface eth2 inet static
-address 10.151.71.69
+address 10.151.79.69
 netmask 255.255.255.252
 ```
 
