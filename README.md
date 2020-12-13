@@ -16,12 +16,12 @@ Praktikum Modul 4 Jarkom 2020<br/>
 ![image](https://user-images.githubusercontent.com/58022238/102008952-cbcb7800-3d66-11eb-9aff-b49d16c0d23a.png)
 
 # CIDR (Classless Inter Domain Routing) - UML
-## Menggabungkan subnet-subnet mulai dari yang paling jauh dalam topologi, penggabungannya:
+Menggabungkan subnet-subnet mulai dari yang paling jauh dalam topologi, penggabungannya:
 
-# ![image](https://user-images.githubusercontent.com/58022238/102002475-732cb880-3d2f-11eb-8d44-c08a084a0a73.png)
-# ![image](https://user-images.githubusercontent.com/58022238/102002480-7de74d80-3d2f-11eb-90b7-8bf10889f982.png)
-# ![image](https://user-images.githubusercontent.com/58022238/102002487-97889500-3d2f-11eb-883e-6beee14b1395.png)
-# ![image](https://user-images.githubusercontent.com/58022238/102002491-a2dbc080-3d2f-11eb-832c-3315f5cd05da.png)
-## Sehingga di dapatkan berikut pohon pembagian IP berdasarkan penggabungan subnet yang telah dilakukan:
-# 
-![image](https://user-images.githubusercontent.com/58022238/102009334-5b722600-3d69-11eb-9db4-9193cf7461b6.png)
+<br/>![image](https://user-images.githubusercontent.com/58022238/102002475-732cb880-3d2f-11eb-8d44-c08a084a0a73.png)
+<br/>![image](https://user-images.githubusercontent.com/58022238/102002480-7de74d80-3d2f-11eb-90b7-8bf10889f982.png)
+<br/>![image](https://user-images.githubusercontent.com/58022238/102002487-97889500-3d2f-11eb-883e-6beee14b1395.png)
+<br/>![image](https://user-images.githubusercontent.com/58022238/102002491-a2dbc080-3d2f-11eb-832c-3315f5cd05da.png)
+<br/>Sehingga di dapatkan berikut pohon pembagian IP berdasarkan penggabungan subnet yang telah dilakukan:
+
+<br/>![image](https://user-images.githubusercontent.com/58022238/102009334-5b722600-3d69-11eb-9db4-9193cf7461b6.png)
