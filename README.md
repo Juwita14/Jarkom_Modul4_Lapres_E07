@@ -376,3 +376,10 @@ address 192.168.0.2
 netmask 255.255.252.0
 gateway 192.168.0.1
 ```
+
+<br/>Kemudian melakukan iptables pada UML **SURABAYA** diketikkan perintah ```iptables –t nat –A POSTROUTING –o eth0 –j MASQUERADE –s 192.168.0.0/16```.
+<br/>Selanjutnya pada 4 router yaitu **SURABAYA**, **PASURUAN**, **BATU**, dan **KEDIRI** ditambahkan route baru seperti berikut:
+- **SURABAYA** = A1, E2, Malang, Mojokerto
+- **PASURUAN** = A10, C2
+- **BATU** = B3, A8, C1, Malang
+- **KEDIRI** = B1, Malang
